@@ -3,7 +3,7 @@
 var questionNum = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
 
 function initializeQuestions() {
-  let doc = document.getElementById("Questionaire");
+  let doc = document.getElementById("Questionnaire");
   
   for (let i = 0; i < doc.length; i++) {
     questionNum[i] = doc.elements[i].value;
@@ -22,7 +22,7 @@ function diagnose() {
   }
   if (questionNum[9] > 0) {
     score++;
-    document.write("<br>Question 9 was posistive. Assess for suicide risk.<br>");
+    document.write("<br>Question 9 was positive. Assess for suicide risk.<br>");
   }
   // If the answer is YES to 1,2, and 3, tentative diagnosis of depression
   if (score > 2) {
@@ -54,15 +54,15 @@ function calcSeverity() {
 
   // Score is 5-9
   if (total > 5 && total < 10) {
-    document.write("<br> Minimal symptoms. Suport, ask to call if condition worsens, and return in 1 month. <br>");
+    document.write("<br> Minimal symptoms. Support, ask to call if condition worsens, and return in 1 month. <br>");
   }
   // Score is 10-14
   else if (total > 9 && total < 15) {
-    document.write("<br> Minor Depression Dysmthymia, or Major Depression Mild. Support, contact in one week. Antidepressent or psychotherarpy, contact in one week. <br>");
+    document.write("<br> Minor Depression Dysmthymia, or Major Depression Mild. Support, contact in one week. Antidepressant or psychotherapy, contact in one week. <br>");
   }
   // Score is 15-19
   else if (total > 14 && total < 20) {
-    document.write("<br> Major Depression, moderate. Antidepressent or psychotherapy. <br>");
+    document.write("<br> Major Depression, moderate. Antidepressant or psychotherapy. <br>");
   }
   // Score is over 20
   else if (total >= 20) {
