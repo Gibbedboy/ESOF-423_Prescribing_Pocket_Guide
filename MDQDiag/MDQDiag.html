@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>p.indent{ padding-left: 1.8em }</style>
+    <link rel="stylesheet" href="style.css">
+    <script src="MDQDiag.js"> </script>
+  </head>
+
+  <body>
+    <h1>Mood Disorder Questionaire</h1>
+    
+    <p>1.) Has there ever been a period of time when you were not your usual self and…</p>
+    <form id="Questionaire" action="/action_page.php">
+        <p class="indent"> 
+            …you felt so good or so hyper that other people thought you were not your normal self or you were so hyper that you got into trouble?:<br> 
+            <input type="text" name="q1" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you were so irritable that you shouted at people or started fights or arguments?<br> 
+            <input type="text" name="q2" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you felt much more self-confdent than usual?<br> 
+            <input type="text" name="q3" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you got much less sleep than usual and found that you didn’t really miss it?<br> 
+            <input type="text" name="q4" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you were more talkative or spoke much faster than usual?<br> 
+            <input type="text" name="q5" value="yes"><br>
+        </p>
+        <p class="indent">
+             …thoughts raced through your head or you couldn’t slow your mind down?<br> 
+            <input type="text" name="q6" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you were so easily distracted by things around you that you had trouble concentrating or staying on track?<br> 
+            <input type="text" name="q7" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you had more energy than usual?<br> 
+            <input type="text" name="q8" value="yes"><br>
+        </p>
+        <p class="indent"> 
+            …you were much more active or did many more things than usual?<br> 
+            <input type="text" name="q9" value="yes"><br>
+        </p>
+        <p class="indent"> 
+            …you were much more social or outgoing than usual, for example you telephoned friends in the middle of the night?<br> 
+            <input type="text" name="q10" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you were much more interested in sex than usual?<br> 
+            <input type="text" name="q11" value="yes"><br>
+        </p>
+        <p class="indent">
+            …you did things that were unusual for you or that other people might have thought were excessive, foolish or risky?<br> 
+            <input type="text" name="q12" value="yes"><br>
+        </p>
+        <p class="indent"> 
+            …spending money got you or your family in trouble?<br> 
+            <input type="text" name="q13" value="yes"><br>
+        </p>
+        <p> 2.) If you checked YES to more than one of the above, have several of these ever happened during the same period of time?</p>
+        <p class="indent">
+            <input type="text" name="Question2" value="yes"><br>
+        </p>
+        <p> 3. On a scale of 1-4, how much of a problem did any of these cause you - like being unable to work; having family, money or legal troubles; getting into arguments or fights?</p>
+        <p class="indent">
+            <input type="text" name="Question3" value="3"><br>
+        </p>
+        
+        <br>
+        <br> 
+
+        </form>
+    
+    
+    <button onclick= "initializeQuestions()"> Diagnose </button>
+    
+    <p id="display"></p>
+    
+  </body>
+  
+  
+
+</html>
