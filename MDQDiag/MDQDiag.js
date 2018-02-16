@@ -1,23 +1,23 @@
 // MDQ Diagnosis Questionnaire Scoring
 
-var questionNum = [yes, yes, yes, yes, yes, yes, yes, yes,  yes,  yes,  yes,  yes,  yes, yes, 3];
+var questionNum = ["yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes",  "yes",  "yes",  "yes",  "yes",  "yes", "yes", 3];
+let len = 0;
 
 function initializeQuestions() {
   let doc = document.getElementById("Questionaire");
-  docuement.write("It works?");
-  // for (let i = 0; i < doc.length; i++) {
-  //   questionNum[i] = doc.elements[i].value;
-  //   docuement.write(questionNum[i]+ "<br>");
-  // }
-  //diagnose();
+  len = doc.length;
+    for (let i = 0; i < len; i++) {
+      questionNum[i] = doc.elements[i].value;
+    }
+  diagnose();
 }
 
 function diagnose() {
   let totalScore = 0;
   let Q1score = 0;
   // Total question 1 scores
-  for (let i = 0; i < doc.length-2; i++) {
-    if(questionNum[i].charAt(0) = 'y'){
+  for (let i = 0; i < len-2; i++) {
+    if(questionNum[i].charAt(0) == 'y'){
       Q1score++;
     }
   }
@@ -25,11 +25,11 @@ function diagnose() {
     totalScore++;
   }
   // Check if question 2 is a 'yes'
-  if (Q1score > 1 && questionNum[doc.length-1].charAt(0) == 'y') {
+  if (Q1score > 1 && questionNum[len-2].charAt(0) == 'y') {
     totalScore++;
   }
   // Check if question 3 is a "Moderate (3)" or "Serious (3)" Problem
-  if (Number(questionNum[doc.length]) > 2 ) {
+  if (Number(questionNum[len-1]) > 2 ) {
     totalScore++;
   }
   document.write("<br>Diagnosis:<br>");
