@@ -1,15 +1,19 @@
 //Junit to test if the password is correct style
+package MedApp;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+import static org.junit.Assert.*;
 
-@test
+@Test
 public class testMedApp {
       //TextField text = new TextField();
       exception.expect(MedApp.class);
-      exception.expectMessage("Negative number not allowed");
       MedApp t = new MedApp();
-      t.methodToBeTest(-1);
+      PasswordField test1 = new PasswordField();
+      test1.getText().equals("-1")
+      exception.expectMessage("Negative number not allowed");
+      assertTure(passField.getText().equals("1"));
     }
   }
 }
