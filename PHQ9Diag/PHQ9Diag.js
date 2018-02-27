@@ -83,42 +83,40 @@ testDingnose();
 }
 
 function testTotalSymptomCount() {
-  let t = 0;
+  let total = 0;
   for (let i = 0; i < 5; i++) {
     if (testQuestionNum[i] >= 2) {
-      t++;
+      total++;
     }
   }
-  return t;
+  return total;
 }
 
 function testCalcSeverity() {
-  let t = 0;
+  let total = 0;
   for (let i = 0; i < 5; i++) {
-    t = Number(t) + Number(testQuestionNum[i]);
+    total = Number(total) + Number(testQuestionNum[i]);
   }
-  document.write(t + "<br>");
-  //if(t!=5){
-  //  document.write(<br> there is something wrong with the code we have<br>)
-  }
+  document.write(total + "<br>");
 
 }
 
 function testDingnose() {
-  let s =0;
+  let score =0;
   //add up all scores
   if (testQuestionNum[0] > 1 || testQuestionNum[1] > 1) {
-    s++;
+    score++;
   }
   if (testTotalSymptomCount() >= 5) {
-    s++;
+    score++;
   }
   if (testQuestionNum[4] > 0) {
-    s++;
+    score++;
     document.write("<br>Test Question 5 was positive.<br>");
   }
-  if (s <= 5) {
-    document.write("<br>the test runs well<br>");
+  if (score > 2) {
+    document.write("<br>Tentative diagnosis of depression<br>");
+
   }
   document.write("<br>Severity Score:  ");
   testCalcSeverity();
