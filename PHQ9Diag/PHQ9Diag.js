@@ -93,11 +93,14 @@ function testTotalSymptomCount() {
 }
 
 function testCalcSeverity() {
-  let total = 0;
+  let t = 0;
   for (let i = 0; i < 5; i++) {
-    total = Number(t) + Number(testQuestionNum[i]);
+    t = Number(t) + Number(testQuestionNum[i]);
   }
   document.write(t + "<br>");
+  //if(t!=5){
+  //  document.write(<br> there is something wrong with the code we have<br>)
+  }
 
 }
 
@@ -105,16 +108,16 @@ function testDingnose() {
   let s =0;
   //add up all scores
   if (testQuestionNum[0] > 1 || testQuestionNum[1] > 1) {
-    score++;
+    s++;
   }
   if (testTotalSymptomCount() >= 5) {
-    score++;
+    s++;
   }
   if (testQuestionNum[4] > 0) {
-    score++;
+    s++;
     document.write("<br>Test Question 5 was positive.<br>");
   }
-  if (score = 15) {
+  if (s <= 5) {
     document.write("<br>the test runs well<br>");
   }
   document.write("<br>Severity Score:  ");
