@@ -4,7 +4,7 @@ var questionNum = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
 
 function initializeQuestions() {
   let doc = document.getElementById("Questionnaire");
-  
+
   for (let i = 0; i < doc.length; i++) {
     questionNum[i] = doc.elements[i].value;
   }
@@ -31,7 +31,7 @@ function diagnose() {
   if (score > 2) {
     result+="Tentative diagnosis of depression\n";
   }
-  
+
   //Write Result to paragraph section
   document.getElementById("display").textContent=result;
 }
@@ -75,3 +75,53 @@ function calcSeverity() {
   }
   return result;
 }
+
+//add the test methods which aim to add up all the questions scores
+ //to test the first five questions
+ function testQuestions() {
+   let testDoc = document.getElementById("test Questionnaire");
+ var testQuestionNum = [1,1,1,1,1]
+ for(let i=0; i<5 ; i++){
+   testQuestionNum[i] = 3;
+ }
+ testDingnose();
+ }
+
+ function testTotalSymptomCount() {
+   let t = 0;
+   for (let i = 0; i < 5; i++) {
+     if (testQuestionNum[i] >= 2) {
+       t++;
+     }
+   }
+   return t;
+ }
+
+ function testCalcSeverity() {
+   let total = 0;
+   for (let i = 0; i < 5; i++) {
+     total = Number(t) + Number(testQuestionNum[i]);
+   }
+   document.write(t + "<br>");
+
+ }
+
+ function testDingnose() {
+   let s =0;
+  //add up all scores
+  if (testQuestionNum[0] > 1 || testQuestionNum[1] > 1) {
+     score++;
+   }
+  if (testTotalSymptomCount() >= 5) {
+    score++;
+  }
+   if (testQuestionNum[4] > 0) {
+     score++;
+     document.write("<br>Test Question 5 was positive.<br>");
+   }
+   if (score = 15) {
+     document.write("<br>the test runs well<br>");
+   }
+   document.write("<br>Severity Score:  ");
+   testCalcSeverity();
+ }
