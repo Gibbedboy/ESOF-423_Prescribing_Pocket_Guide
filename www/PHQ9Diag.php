@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php 
+<?php
 $navlink = "PHQ9";
-include("includes/header.php"); 
+include("includes/header.php");
 ?>
 
 <html div id="bg">
@@ -19,7 +19,7 @@ include("includes/header.php");
 <div class="mainContent">
 	<script src="assets/js/PHQ9Diag.js?t=<?=time()?>"></script>
     <h1>Depression Questionnaire</h1>
-    
+
     <form id="Questionnaire" action="/action_page.php">
       1.) Little interest or pleasure in doing things:<br> <input type="text" name="q1"><br>
       2.) Feeling down, depressed or hopeless:<br> <input type="text" name="q2"><br>
@@ -32,13 +32,13 @@ include("includes/header.php");
       9.) Thought that you'd be better off dead or hurting yourself in some way:<br> <input type="text" name="q9"><br>
       10.) On a scale of 1-4, How difficult have these problems made it for you do do your work, take care of daily life, or get along with others?<br> <input type="text" name="q10"><br>
     </form>
-    
+
 	<input type="button" class="button" value="Diagnose" onClick="initializeQuestions()">
-    
+  <input type="button" class="button" value="testDiagnose" onclick="testQuestions()">
     <p id="display"></p>
-</div> 
+</div>
 </body>
-  
-  
+
+
 
 </html>
