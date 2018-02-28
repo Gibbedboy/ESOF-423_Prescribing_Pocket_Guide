@@ -73,7 +73,7 @@ function dbWritePatient(fName, mName, lName, x){
 function delImgCreate() {
 	var img = new Image(25,25);
     img.src = "assets/images/garbage_can.png";
-	img.setAttribute("onclick", "deleteItem(this,event);");
+	img.setAttribute("onclick", "deletePatient(this,event);");
     return img;
 }
 function editImgCreate() {
@@ -82,7 +82,7 @@ function editImgCreate() {
 	//img.setAttribute("onclick", "deleteItem(this,event);");
     return img;
 }
-function deleteItem(delItem, e){
+function deletePatient(delItem, e){
 	//delete li person Item
 	var items = delItem.parentElement.parentElement.getElementsByTagName("li");
 	var delID = items[3].textContent;

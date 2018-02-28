@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php 
-$navlink = "login";
+$navlink = "signup";
 include("includes/dbLogin.php"); 
 ?>
 
@@ -39,20 +39,21 @@ include("includes/dbLogin.php");
 				</form>
 			</div>
 			<div class = "SubLogin">
-				<form name="pass" onsubmit="return false;" onkeypress="submitTester(this,event);">
+				<form name="passSignup" onsubmit="return false;" onkeypress="submitTester(this,event);">
 					<input type="password" id="password" name="password" placeholder="Password" >
+					<input type="password" id="repassword" name="repassword" placeholder="Reenter Password" >
 					<input type="submit" style="display: none" />
 				</form>
 			</div>
 			
 			<div class = "InlineLogin">
-				<a href="signup.php">Signup</a>
+				<a href="index.php">Sign In</a>
 			</div>
 			<div class = "InlineLogin">
 				<a href="#">Forgot Password</a>
 			</div>
 		</div>
-		<input type="button" class="button" value="Login" onClick="login();">
+		<input type="button" class="button" value="Create Account" onClick="signup();">
 	</div>
 	</div>
 </body>

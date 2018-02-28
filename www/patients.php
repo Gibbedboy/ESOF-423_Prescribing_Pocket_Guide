@@ -23,11 +23,7 @@ include("includes/dbLogin.php");
 			</ul>
 		
 			<ul id= "allPatients">
-				<!--
-				<li id="person"> Aaron | X | Date </li>
-				<li id="person">Bob | X | Date </li>
-				<li id="person">Carol | X | Date </li>
-				-->
+				<!--<li id="person"> Aaron | ID | Date </li>-->
 			</ul>
 		<!--</div>-->
 	</div>
