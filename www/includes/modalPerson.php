@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<?php 
+include("includes/dbLogin.php");
+?>
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,6 +14,7 @@
 
 <body>
 	<script type="text/javascript" src="assets/js/modalPerson.js?t=<?=time()?>"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 	  <!-- Modal content -->
@@ -25,7 +29,6 @@
 		</form>
 		<input type="button" class="button" value="Submit" onClick="addNew();">
 	  </div>
-
 	</div>
 </body>
 </html>

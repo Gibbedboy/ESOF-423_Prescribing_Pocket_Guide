@@ -3,29 +3,21 @@
 <?php 
 $navlink = "patients";
 include("includes/header.php"); 
+include("includes/dbLogin.php"); 
 ?>
 
 <html div id="bg">
-<!--
-<head>
-	<title>Welcome</title>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-	<link rel="shortcut icon" href="index.php?img=favicon" type="image/ico" />
-</head>
--->
 <script type="text/javascript" src="assets/js/loadPatients.js?t=<?=time()?>"></script>
 <?php include("includes/modalPerson.php"); ?>
-<body onload="loadPatients(); modalPerson();" onscroll = "sideNavHeight();">
+<body onload="sideNavHeight(); modalPerson();" onscroll = "sideNavHeight();">
 <div class="mainContent">
 	<?php include("includes/contactsNav.php"); ?>
 	<div id="patientsContent">
 		<h1>My Patients</h1>
-		<div id="highlightEach">
+		<!--<div id="highlightEach">-->
 			<ul id = "categories">
 				<li>Name</li><!--
-				--><li>X</li><!--
+				--><li>Patient ID</li><!--
 				--><li>Last Updated</li><!--
 				-->
 			</ul>
@@ -37,8 +29,17 @@ include("includes/header.php");
 				<li id="person">Carol | X | Date </li>
 				-->
 			</ul>
-		</div>
+		<!--</div>-->
 	</div>
 </div>
+
+<?php
+	$query = mysqli_query($dbconnect, "SELECT * FROM Patient")
+		or die (mysqli_error($dbconnect));
+	while ($row = mysqli_fetch_array($query)) {
+		echo "<script> dbLoadPatient(".json_encode($row)."); </script>";
+	}
+?>
+
 </body>
 </html>

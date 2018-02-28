@@ -69,7 +69,7 @@ body{
 	margin: 0px 20vw 0px 20vw;
 	padding: 10px 40px 0px;
 	min-height: 97vh;
-	min-width: 500px;
+	min-width: 800px;
 	/*
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -158,9 +158,10 @@ input{
 	display: inline-block;
 	float: left;
 	margin-right: 20px;
-	min-height: calc(99vh - 176px);
+	min-height: calc(99vh - 196px);
 	position: sticky;
-	top: 0;
+	position: -webkit-sticky;
+	top: 0px;
 	font-weight: bold;
 }
 #sideNav .settings {
@@ -185,7 +186,10 @@ input{
 }
 #patientsContent{
 	margin-left: 230px;
-	overflow-x: scroll;
+}
+#patientsContent ul{
+	
+	padding: 0px;
 }
 #vertMid{
 	vertical-align: middle;
@@ -200,7 +204,9 @@ input{
     background-color: grey;
 	cursor: pointer;
 }
-
+li#person{
+	list-style-type: none;
+}
 #person ul{
 	padding: 0px;
 }
@@ -209,19 +215,32 @@ input{
     display: inline-block;
 	text-align: left;
 	font-size: 20px; 
-	padding: 0px 10px 0px 10px;
+	padding: 0px 0px 0px 10px;
 	width: 150px;
 }
 #person li:last-child {
 	padding-right: 0px;
 }
-
+#person li:first-child {
+	padding-left: 0px;
+}
+li#highlightEach{
+	width: 25px;
+	padding: 5px 5px 5px 5px;
+}
+li:hover#highlightEach{
+    background-color: grey;
+	cursor: pointer;
+}
+ul#categories{
+	margin-left: 70px;
+}
 #categories li{
 	list-style-type: none;
     display: inline-block;
 	text-align: left;
 	font-size: 20px; 
-	padding: 10px 10px 10px 10px;
+	padding: 10px 0px 10px 10px;
 	width: 150px;
 	border-right: 1px solid #001d3f;
 	font-weight: bold;
