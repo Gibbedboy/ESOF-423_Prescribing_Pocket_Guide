@@ -22,7 +22,7 @@ function diagnose() {
   }
   if (questionNum[9] > 0) {
     score++;
-    document.write("<br>Question 9 was posistive. Assess for suicide risk.<br>");
+    document.write("<br>Question 9 was positive. Assess for suicide risk.<br>");
   }
   // If the answer is YES to 1,2, and 3, tentative diagnosis of depression
   if (score > 2) {
@@ -54,7 +54,7 @@ function calcSeverity() {
 
   // Score is 5-9
   if (total > 5 && total < 10) {
-    document.write("<br> Minimal symptoms. Suport, ask to call if condition worsens, and return in 1 month. <br>");
+    document.write("<br> Minimal symptoms. Support, ask to call if condition worsens, and return in 1 month. <br>");
   }
   // Score is 10-14
   else if (total > 9 && total < 15) {
@@ -66,7 +66,6 @@ function calcSeverity() {
   }
   // Score is over 20
   else if (total >= 20) {
-    document
-    .write("<br> Major Depression, severe. Recommend antidepressants and psychotherapy (Especially if not improved on monotherapy). <br>");
+    document.write("<br> Major Depression, severe. Recommend antidepressants and psychotherapy (Especially if not improved on monotherapy). <br>");
   }
 }

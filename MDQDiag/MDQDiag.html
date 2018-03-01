@@ -11,75 +11,181 @@
     <h1>Mood Disorder Questionaire</h1>
     
     <p>1.) Has there ever been a period of time when you were not your usual self and…</p>
-    <form id="Questionaire" action="/action_page.php">
-        <p class="indent"> 
-            …you felt so good or so hyper that other people thought you were not your normal self or you were so hyper that you got into trouble?:<br> 
-            <input type="text" name="q1" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you were so irritable that you shouted at people or started fights or arguments?<br> 
-            <input type="text" name="q2" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you felt much more self-confdent than usual?<br> 
-            <input type="text" name="q3" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you got much less sleep than usual and found that you didn’t really miss it?<br> 
-            <input type="text" name="q4" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you were more talkative or spoke much faster than usual?<br> 
-            <input type="text" name="q5" value="yes"><br>
-        </p>
-        <p class="indent">
-             …thoughts raced through your head or you couldn’t slow your mind down?<br> 
-            <input type="text" name="q6" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you were so easily distracted by things around you that you had trouble concentrating or staying on track?<br> 
-            <input type="text" name="q7" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you had more energy than usual?<br> 
-            <input type="text" name="q8" value="yes"><br>
-        </p>
-        <p class="indent"> 
-            …you were much more active or did many more things than usual?<br> 
-            <input type="text" name="q9" value="yes"><br>
-        </p>
-        <p class="indent"> 
-            …you were much more social or outgoing than usual, for example you telephoned friends in the middle of the night?<br> 
-            <input type="text" name="q10" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you were much more interested in sex than usual?<br> 
-            <input type="text" name="q11" value="yes"><br>
-        </p>
-        <p class="indent">
-            …you did things that were unusual for you or that other people might have thought were excessive, foolish or risky?<br> 
-            <input type="text" name="q12" value="yes"><br>
-        </p>
-        <p class="indent"> 
-            …spending money got you or your family in trouble?<br> 
-            <input type="text" name="q13" value="yes"><br>
-        </p>
+    <form id="Questionaire">
+        <input type="radio" id="question" name="q1" value="y" checked>
+        <label>Yes</label>
+        <input type="radio"  name="q1" value="n">
+        <input type="radio"  name="q1" value="n">
+        <input type="radio" id="question" name="q2" value="y" checked>
+        <input type="radio" id="question" name="q3" value="y" checked>
+        <input type="radio" id="question" name="q4" value="y" checked>
+        <input type="radio" id="question" name="q5" value="y" checked>
+        <input type="radio" id="question" name="q6" value="y" checked>
+        <!-- <fieldset>
+            <legend> …you felt so good or so hyper that other people thought you were not your normal self or you were so hyper that you got into trouble?:</legend>
+                <div>
+                    <input type="radio" name="q1" value="y" checked>
+                    <label>Yes</label>
+                </div>    
+                <div>
+                    <input type="radio" name="q1" value="n">
+                    <label>No</label>
+                </div>               
+        </fieldset> -->
+        <!-- <fieldset>
+            <legend> …you were so irritable that you shouted at people or started fights or arguments?</legend>
+                <div>
+                    <input type="radio" name="q2" value=true checked>
+                    <label>Yes</label
+                </div>
+                <div>
+                    <input type="radio" name="q2" value=false>
+                    <label>No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend> …you felt much more self-confdent than usual?</legend>
+                <div>
+                    <input type="radio" id="Q3Y" name="q3" value=true>
+                    <label for="Q3Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q3N" name="q3" value=false>
+                    <label for="Q3N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend> …you got much less sleep than usual and found that you didn’t really miss it?</legend>
+                <div>
+                    <input type="radio" id="Q4Y" name="q4" value=true>
+                    <label for="Q4Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q4N" name="q4" value=false>
+                    <label for="Q4N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend> …you were more talkative or spoke much faster than usual?</legend>
+                <div>
+                    <input type="radio" id="Q5Y" name="q5" value=true>
+                    <label for="Q5Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q5N" name="q5" value=false>
+                    <label for="Q5N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend> …thoughts raced through your head or you couldn’t slow your mind down?</legend>
+                <div>
+                    <input type="radio" id="Q6Y" name="q6" value=true>
+                    <label for="Q6Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q6N" name="q6" value=false>
+                    <label for="Q6N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend> …you were so easily distracted by things around you that you had trouble concentrating or staying on track?</legend>
+                <div>
+                    <input type="radio" id="Q7Y" name="q7" value=true>
+                    <label for="Q7Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q7N" name="q7" value=false>
+                    <label for="Q7N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …you had more energy than usual?</legend>
+                <div>
+                    <input type="radio" id="Q8Y" name="q8" value=true>
+                    <label for="Q8Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q8N" name="q8" value=false>
+                    <label for="Q8N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …you were much more active or did many more things than usual?</legend>
+                <div>
+                    <input type="radio" id="Q9Y" name="q9" value=true>
+                    <label for="Q9Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q9N" name="q9" value=false>
+                    <label for="Q9N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …you were much more social or outgoing than usual, for example you telephoned friends in the middle of the night?</legend>
+                <div>
+                    <input type="radio" id="Q10Y" name="q10" value=true>
+                    <label for="Q10Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q10N" name="q10" value=false>
+                    <label for="Q10N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …you were much more interested in sex than usual?</legend>
+                <div>
+                    <input type="radio" id="Q11Y" name="q11" value=true>
+                    <label for="Q11Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q11N" name="q11" value=false>
+                    <label for="Q11N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …you did things that were unusual for you or that other people might have thought were excessive, foolish or risky?</legend>
+                <div>
+                    <input type="radio" id="Q12Y" name="q12" value=true>
+                    <label for="Q12Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q12N" name="q12" value=false>
+                    <label for="Q12N">No</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>  …spending money got you or your family in trouble?</legend>
+                <div>
+                    <input type="radio" id="Q13Y" name="q13" value=true>
+                    <label for="Q13Y">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q13N" name="q13" value=false>
+                    <label for="Q13N">No</label>
+                </div>
+        </fieldset> -->
         <p> 2.) If you checked YES to more than one of the above, have several of these ever happened during the same period of time?</p>
-        <p class="indent">
-            <input type="text" name="Question2" value="yes"><br>
-        </p>
+        <fieldset>
+            <div>
+                <input type="radio" id="question" name="q14" value="y">
+                <label>Yes</label>
+            </div>
+           <div>
+                <input type="radio" id="question" name="q14" value="n">
+                <label>No</label>
+            </div>
+        </fieldset>
         <p> 3. On a scale of 1-4, how much of a problem did any of these cause you - like being unable to work; having family, money or legal troubles; getting into arguments or fights?</p>
-        <p class="indent">
-            <input type="text" name="Question3" value="3"><br>
-        </p>
+        <fieldset>
+            <input type="number" id="question" min=1 max=4 name="Question3"  value=3><br>
+        </fieldset>
         
         <br>
         <br> 
-
-        </form>
+        <button type="submit" onclick= "initializeQuestions()"> Diagnose </button>
+    </form>
     
-    
-    <button onclick= "initializeQuestions()"> Diagnose </button>
+    <!-- <button type=submit onclick= "initializeQuestions()"> Diagnose </button> -->
     
     <p id="display"></p>
     
