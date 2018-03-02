@@ -4,7 +4,7 @@ var questionNum = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
 
 function initializeQuestions() {
   let doc = document.getElementById("Questionaire");
-  
+
   for (let i = 0; i < doc.length; i++) {
     questionNum[i] = doc.elements[i].value;
   }
@@ -70,3 +70,53 @@ function calcSeverity() {
     .write("<br> Major Depression, severe. Recommend antidepressants and psychotherapy (Especially if not improved on monotherapy). <br>");
   }
 }
+//add the test methods which aim to add up all the questions scores
+ //to test the first five questions
+
+ var testQuestionNum = [1,1,1,1,1]
+ function testQuestions() {
+   let testDoc = document.getElementById("test Questionnaire");
+ for(let i=0; i<testDoc.length; i++){
+   testQuestionNum[i] = testDoc.elements[i].value;
+ }
+ testDingnose();
+ }
+
+ function testTotalSymptomCount() {
+   let t = 0;
+   for (let i = 0; i < 5; i++) {
+     if (testQuestionNum[i] >= 2) {
+       t++;
+     }
+   }
+   return t;
+ }
+
+ function testCalcSeverity() {
+   let t = 0;
+   for (let i = 0; i < 5; i++) {
+     t = Number(t) + Number(testQuestionNum[i]);
+   }
+   document.write(t + "<br>");
+
+ }
+
+ function testDingnose() {
+   let s =0;
+  //add up all scores
+  if (testQuestionNum[0] > 1 || testQuestionNum[1] > 1) {
+     s++;
+   }
+  if (testTotalSymptomCount() >= 5) {
+    s++;
+  }
+   //if (testQuestionNum[4] > 0) {
+  //   s++;
+  //   document.write("<br>Test Question 5 was added.<br>");
+  // }
+   if (s !=0) {
+     document.write("<br>the test runs well<br>");
+   }
+   document.write("<br>Severity Score:  ");
+   testCalcSeverity();
+ }
