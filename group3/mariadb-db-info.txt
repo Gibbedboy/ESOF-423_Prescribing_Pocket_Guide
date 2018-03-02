@@ -1,0 +1,12 @@
+Database name: group3
+Username: group3
+Password: db4Group3pink
+Hostname: localhost
+
+# Store your SQL statements in a flat text file ending in .sql
+mysql -u group3 -p group3 < whatever.sql
+
+# Interactive mysql text-based client
+mysql -u group3 -p group3 
+
+
