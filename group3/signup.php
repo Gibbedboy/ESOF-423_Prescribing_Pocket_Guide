@@ -52,7 +52,7 @@ include("includes/dbLogin.php");
 			</div>
 			
 			<div class = "InlineLogin">
-				<a href="index.php">Sign In</a>
+				<a href="signin.php">Sign In</a>
 			</div>
 			<div class = "InlineLogin">
 				<a href="#">Forgot Password</a>

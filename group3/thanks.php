@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
 <?php 
-	session_start(); 
-	$userID = $_SESSION['userID'];
+$navlink = "frontPage";
 ?>
 
+<html div id="bg">
 <head>
 	<meta charset="UTF-8">
 	<title><?php include('includes/titles.php') ?> | Prescribing Pocket Guide: Online</title>
@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="favicon.ico?t=<?=time()?>" type="image/ico" />
 	
 </head>
+
 <body>
 	<div id="cm-container">
 		<header>
@@ -24,8 +25,11 @@
 				<a href="index.php"><img src="favicon.ico?t=<?=time()?>" height="50">
 				<h1>Prescribing Pocket Guide: Online</h1> </a>
 			</div>
-			<?php include('includes/nav.php'); ?>
 		</header>
 	</div>
+	<div class="mainContent">
+		<h2>Thank you for your response</h2>
+	</div>
 </body>
+<?php include("includes/footer.php"); ?>
 </html>

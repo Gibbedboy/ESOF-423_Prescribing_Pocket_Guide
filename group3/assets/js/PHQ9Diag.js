@@ -33,8 +33,6 @@ function initializeQuestions(P_ID) {
   else if(filled){
 	  diagnose();
 	  p.addAnsToDB(questionNum);
-	  document.location.href = "patients.php";
-		window.location.href = "patients.php";
   }else{
 	  alert("Form not Complete");
   }
