@@ -115,7 +115,7 @@ function calcSeverity() {
   //   document.write("<br>Test Question 5 was added.<br>");
   // }
    if (s !=0) {
-     document.write("<br>the Runs well right now!<br>");
+     document.write("<br>the Program Runs well!<br>");
    }
    document.write("<br>Severity Score:  ");
    testCalcSeverity();
