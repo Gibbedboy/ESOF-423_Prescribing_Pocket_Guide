@@ -5,6 +5,8 @@ class Patient {
 	this.mname = "";
 	this.lname = "";
 	this.updated = "";
+	//change to forms dictionary, using dict of form objects
+	//form objects will obviously have to be made similar to this Patient class
 	this.ansPHQ9 = {};
 	this.attr = {};
 	}
@@ -65,6 +67,7 @@ class Patient {
 		return "P_ID="+this.P_ID;
 	}
 }
+//phase out this is favor of list/dict const
 Patient.prototype.manualConstructor = function (P_ID, fname, mname, lname) {
     this.P_ID = P_ID;
 	this.fname = fname;
@@ -85,6 +88,5 @@ Patient.prototype.listConstructor = function (list) {
 	this.mname = list["mname"];
 	this.lname = list["lname"];
 	this.updated = list["fname"];
-	
 	return this;
 };
