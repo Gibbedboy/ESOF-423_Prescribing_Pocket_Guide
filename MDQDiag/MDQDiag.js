@@ -1,17 +1,17 @@
 // MDQ Diagnosis Questionnaire Scoring
 
-var questionNum = [true, true, true, true, true, true, true, true,  true,  true,  true,  true,  true, true, 3];
+var questionNum = ["y", "y", "y", "y", "y", "y", "y", "y",  "y",  "y",  "y",  "y",  "y", "y", 3];
 let len = 0;
 
 function initializeQuestions() {
-  // let doc = document.getElementById("Questionaire");
-  // len = doc.length;
-  //   for (let i = 0; i < len; i++) {
-  //     document.write(doc.elements[i].value + "<br>");
-  //     questionNum[i] = doc.elements[i].value;
-  //   }
-  let doc = document.getElementsByID("Question")
-  diagnose();
+	/* let doc = document.getElementById("Questionaire");
+	let questions = document.getElementbyID("Question");
+	len = doc.length;
+    for (let i = 0; i < len; i++) {
+		document.write(questions.elements.value + "<br>");
+		questionNum[i] = questions.elements.value;
+    } */
+	diagnose();
 }
 
 function diagnose() {
